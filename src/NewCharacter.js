@@ -1,9 +1,9 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import Divider from '@material-ui/core/Divider'
-import Card from '@material-ui/core/Card'
-import CardContent from '@material-ui/core/CardContent'
 import styled from '@emotion/styled'
+import StatsBar from './StatsBar'
+import BasicDetails from './BasicDetails'
 
 const Step = styled.div({
   margin: '24px 0px'
@@ -14,12 +14,6 @@ const StepsContainer = styled.div({
   flexDirection: 'column'
 })
 
-const CardContainer = styled.div({
-  position: 'sticky',
-  margin: '24px 0px',
-  top: '24px'
-})
-
 const NewCharacterContainer = styled.div({
   position: 'relative'
 })
@@ -27,12 +21,15 @@ const NewCharacterContainer = styled.div({
 const NewCharacter = () => {
   return (
     <NewCharacterContainer>
-      <CardContainer>
-        <Card style={{ width: '100%' }}>
-          <CardContent>STATS CURRENCY KARMA ETC</CardContent>
-        </Card>
-      </CardContainer>
+      <StatsBar />
       <StepsContainer>
+        <Step>
+          <Typography variant="h4" color="primary">
+            Basic details
+          </Typography>
+          <BasicDetails />
+        </Step>
+        <Divider />
         <Step>
           <Typography variant="h4" color="primary">
             Select Priorities
@@ -56,7 +53,6 @@ const NewCharacter = () => {
             Buy Gear
           </Typography>
         </Step>
-        <div style={{ height: '4000px' }}>hi</div>
       </StepsContainer>
     </NewCharacterContainer>
   )
