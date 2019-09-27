@@ -8,7 +8,7 @@ import NewCharacter from './NewCharacter'
 const Builder = () => (
   <>
     <Bar />
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" style={{ marginTop: '24px' }}>
       <Router>
         <Landing path="/" />
         <NewCharacter path="/new-character" />
