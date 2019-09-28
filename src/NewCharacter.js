@@ -4,6 +4,7 @@ import Divider from '@material-ui/core/Divider'
 import styled from '@emotion/styled'
 import StatsBar from './StatsBar'
 import BasicDetails from './BasicDetails'
+import Priorities from './Priorities'
 
 const Step = styled.div({
   margin: '24px 0px'
@@ -34,6 +35,7 @@ const NewCharacter = () => {
           <Typography variant="h4" color="primary">
             Select Priorities
           </Typography>
+          <Priorities />
         </Step>
         <Divider />
         <Step>
